@@ -27,9 +27,11 @@ public class HomePage {
         WebDriver driver = DriverFactory.getChromeDriver();
         try {
             driver.get("http://demowebshop.tricentis.com/");
-            testHomePageHeader(driver);
-            Thread.sleep(2000);
+//            testHomePageHeader(driver);
+//            testHomePageHeader(driver);
             testHomePageFooter(driver);
+            Thread.sleep(2000);
+
 
 
         } catch (InterruptedException e) {
@@ -42,9 +44,12 @@ public class HomePage {
     public static void testHomePageHeader(WebDriver driver) {
 
         HomePage homePage = new HomePage(driver);
-
+        System.out.println("=====Test header section======");
+        // Test Logo src
         String headerImgSrc = homePage.headerComponent().logoImg().getAttribute("src");
         System.out.println("Logo Img src: " + headerImgSrc);
+
+        // Search an item
         homePage.headerComponent().inputProductNameAndSearch("Lap top");
 
     }
@@ -53,8 +58,17 @@ public class HomePage {
 
         HomePage homePage = new HomePage(driver);
 
+        System.out.println("=====Test footer section======");
+        // Test Powered By footer text and link
         String poweredByText = homePage.footerComponent().poweredByComponent().getText();
+        String poweredByTeLink = homePage.footerComponent().poweredByComponent().getLink();
         System.out.println("Powered by: " + poweredByText);
+        System.out.println("Powered by link: " + poweredByTeLink);
+
+        // Test Information column text
+        String informationRandomItemText = homePage.footerComponent.menuInformationComponent().informationItem().getText();
+        System.out.println("Random Information item: " + informationRandomItemText);
+//        homePage.footerComponent.menuInformationComponent().getInformationItems();
 
     }
 
