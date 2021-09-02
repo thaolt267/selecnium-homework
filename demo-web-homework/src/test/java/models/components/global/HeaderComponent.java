@@ -38,7 +38,7 @@ public class HeaderComponent {
     }
 
     public void getShoppingCartNumber() {
-        String cartNum = this.driver.findElement(shoppingCartCountSel).getText();
+        String cartNum = driver.findElement(shoppingCartCountSel).getText();
         cartNum = cartNum.replaceAll("\\D+", "");
         System.out.println("Current number of items in the shopping cart: " + cartNum);
     }
@@ -48,7 +48,7 @@ public class HeaderComponent {
     }
 
     public void getWishlistNumber() {
-        String cartNum = this.driver.findElement(wishlistCountSel).getText();
+        String cartNum = driver.findElement(wishlistCountSel).getText();
         cartNum = cartNum.replaceAll("\\D+", "");
         System.out.println("Shopping cart number: " + cartNum);
     }
