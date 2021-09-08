@@ -1,1 +1,17 @@
+models\components\global\TopMenuComponent.class
+models\components\global\FooterComponent.class
+models\components\global\topMenu\MenuElectronicsComponent.class
+models\components\global\HeaderComponent.class
+models\components\global\NewsLetterComponent.class
+models\pages\HomePage.class
+models\components\global\topMenu\MenuApparelAndShoesComponent.class
+models\components\global\footer\MenuCustomerServiceComponent.class
 driver\DriverFactory.class
+models\components\global\topMenu\MenuComputersComponent.class
+models\components\global\footer\MenuInformationComponent.class
+models\components\global\topMenu\MenuBooksComponent.class
+models\components\global\CategoriesComponent.class
+models\components\global\footer\PoweredByComponent.class
+models\components\global\footer\MenuMyAccountComponent.class
+models\components\global\footer\MenuFollowUsComponent.class
+models\components\global\CommunityPollComponent.class

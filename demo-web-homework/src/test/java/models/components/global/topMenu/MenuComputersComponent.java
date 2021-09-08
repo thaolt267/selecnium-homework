@@ -16,6 +16,9 @@ public class MenuComputersComponent {
     private final By dropdownComputerSel = By.cssSelector("ul li");
     private final By itemDetailsSel = By.cssSelector("a");
 
+    // The 2nd way: Any menu with the end of href is 'computers'
+    private final By menuComputerSel = By.cssSelector(".top-menu li a[href$='computers']");
+
 
     public MenuComputersComponent(WebDriver driver) {
         this.driver = driver;

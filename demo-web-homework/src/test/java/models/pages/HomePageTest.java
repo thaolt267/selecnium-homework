@@ -4,8 +4,10 @@ import driver.DriverFactory;
 import models.components.global.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
-public class HomePage {
+public class HomePageTest {
     private final WebDriver driver;
     private HeaderComponent headerComponent;
     private FooterComponent footerComponent;
@@ -19,7 +21,7 @@ public class HomePage {
     final int THIRD_CHECKBOX_INDEX = 2;
     final int FOURTH_CHECKBOX_INDEX = 3;
 
-    public HomePage(WebDriver driver) {
+    public HomePageTest(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -47,9 +49,10 @@ public class HomePage {
         return new NewsLetterComponent(this.driver);
     }
 
+    @Test
     public static void testPageHeader(WebDriver driver) {
 
-        HomePage homePage = new HomePage(driver);
+        HomePageTest homePage = new HomePageTest(driver);
         System.out.println("=====Test header section======");
         // Test Logo src
         String headerImgSrc = homePage.headerComponent().logoImg().getAttribute("src");
@@ -72,7 +75,7 @@ public class HomePage {
 
     public static void testPageFooter(WebDriver driver) {
 
-        HomePage homePage = new HomePage(driver);
+        HomePageTest homePage = new HomePageTest(driver);
 
         System.out.println("=====Test footer section======");
         // Test Powered By footer text and link
@@ -98,7 +101,7 @@ public class HomePage {
     }
 
     public static void testTopMenu(WebDriver driver) {
-        HomePage homePage = new HomePage(driver);
+        HomePageTest homePage = new HomePageTest(driver);
 
         // Check top menu Books and then click on it
         WebElement menuBook = homePage.topMenuComponent().menuBooksComponent().menuBook();
@@ -118,7 +121,7 @@ public class HomePage {
     }
 
     public static void testCategories(WebDriver driver) {
-        HomePage homePage = new HomePage(driver);
+        HomePageTest homePage = new HomePageTest(driver);
 
         //Print categories title and all categories
         String categoriesTitle = homePage.categoriesComponent().getCategoriesTitle();
@@ -133,7 +136,7 @@ public class HomePage {
     }
 
     public static void testNewsLetter(WebDriver driver) {
-        HomePage homePage = new HomePage(driver);
+        HomePageTest homePage = new HomePageTest(driver);
 
         //Check Sign up for our newsletter
         homePage.newsLetterComponent().newsLetterEmail("testnew@gmail.com");
@@ -142,13 +145,19 @@ public class HomePage {
     }
 
     public static void testCommunityPoll(WebDriver driver) {
-        HomePage homePage = new HomePage(driver);
+        HomePageTest homePage = new HomePageTest(driver);
 
         // Select item and vote
         homePage.communityPollComponent().selectAnCommunityPollCheckbox(homePage.THIRD_CHECKBOX_INDEX);
         homePage.communityPollComponent().voteBtn().click();
 
     }
+
+    @BeforeTest
+    public void beforeTest(){
+
+    }
+
 
     public static void main(String[] args) {
         WebDriver driver = DriverFactory.getChromeDriver();
