@@ -1,4 +1,5 @@
 D:\AutomationLearning\selecnium-homework\demo-web-homework\src\test\java\models\components\global\NewsLetterComponent.java
+D:\AutomationLearning\selecnium-homework\demo-web-homework\src\test\java\models\pages\HomePageTest.java
 D:\AutomationLearning\selecnium-homework\demo-web-homework\src\test\java\models\components\global\CategoriesComponent.java
 D:\AutomationLearning\selecnium-homework\demo-web-homework\src\test\java\models\components\global\footer\MenuInformationComponent.java
 D:\AutomationLearning\selecnium-homework\demo-web-homework\src\test\java\driver\DriverFactory.java
@@ -13,5 +14,5 @@ D:\AutomationLearning\selecnium-homework\demo-web-homework\src\test\java\models\
 D:\AutomationLearning\selecnium-homework\demo-web-homework\src\test\java\models\components\global\HeaderComponent.java
 D:\AutomationLearning\selecnium-homework\demo-web-homework\src\test\java\models\components\global\topMenu\MenuBooksComponent.java
 D:\AutomationLearning\selecnium-homework\demo-web-homework\src\test\java\models\components\global\topMenu\MenuElectronicsComponent.java
-D:\AutomationLearning\selecnium-homework\demo-web-homework\src\test\java\models\pages\HomePage.java
+D:\AutomationLearning\selecnium-homework\demo-web-homework\src\test\java\models\components\global\PopularTagsComponent.java
 D:\AutomationLearning\selecnium-homework\demo-web-homework\src\test\java\models\components\global\TopMenuComponent.java

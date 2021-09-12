@@ -1,0 +1,4 @@
+# Created at 2021-09-11T15:56:28.031
+Boot Manifest-JAR contains absolute paths in classpath 'D:\AutomationLearning\selecnium-homework\demo-web-homework\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+
